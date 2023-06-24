@@ -300,7 +300,8 @@ Use addArtist to do the following:
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
 function addArtist(arr, years, genre, nationality, bio) {
-  /*Your Code Here*/
+  const addMeAsArtist = artists.slice();
+
 }
 
 
@@ -313,9 +314,14 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(artists) {
+  for(let i = 0; i < artists.length; i++) {
+    if (artists[i].paintings > 100){
+      return artists[i];
+    }
+  }
 }
+console.log(lotsOfArt(artists));
 
 
 
