@@ -218,6 +218,7 @@ console.log(artists[2].bio);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 (not auto tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
+
 artists[8].name = "Vincent van Gogh";
 console.log(artists[8]);
 
@@ -252,13 +253,11 @@ Use listOfNames to do the following:
 🌟 EXAMPLE of return: ["Amedeo Modigliani", "Vasiliy Kandinskiy", "Diego Rivera"....]
 */
 
-function listOfNames(arr) {
-  var artistNames = artists.slice();
-  for (let i = 0; i < artistNames.length; i++) {
 
-  }
-  console.log(listOfNames(artistNames.name))
+function listOfNames () {
+ 
 }
+
 
 
 
@@ -275,14 +274,15 @@ Use removeArtist to do the following:
 
 const myRemoveArtist = artists.slice();
 function removeArtist(arr, value) {
-  var index = myRemoveArtist.indexOf(value);
-  if (index > -1) {
-    myRemoveArtist.splice(index, 1);
-  }
-  return myRemoveArtist;
+    var idx = myRemoveArtist.indexOf(value);
+    if (idx !== -1) {
+        array.splice(idx, 1);
+    }
+    return myRemoveArtist;
 }
-
 console.log(removeArtist(myRemoveArtist, 1));
+
+
 
 
 
@@ -303,12 +303,18 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-
-function addArtist() {
- 
-  
+const thisIsMe = artists.slice();
+function addArtist(thisIsMe, name, years, genre, nationality, bio) {
+  thisIsMe.push({ 
+  name: name, 
+  years: years,
+  genre: genre, 
+  nationality: nationality,
+  bio: bio
+});
+return thisIsMe;
 }
-
+console.log(addArtist(thisIsMe, 'Samantha Jones', '1990-2023', 'Web Design', 'Italian', 'lorem ipsum'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -396,4 +402,4 @@ module.exports = {
   lotsOfArt,
   artistInfo,
   artistByCountry
-}
+  }
