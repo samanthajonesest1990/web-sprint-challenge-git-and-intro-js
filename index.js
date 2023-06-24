@@ -255,7 +255,7 @@ Use listOfNames to do the following:
 
 
 function listOfNames () {
- 
+  
 }
 
 
@@ -272,15 +272,11 @@ Use removeArtist to do the following:
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
 
-const myRemoveArtist = artists.slice();
-function removeArtist(arr, value) {
-    var idx = myRemoveArtist.indexOf(value);
-    if (idx !== -1) {
-        array.splice(idx, 1);
-    }
-    return myRemoveArtist;
+
+function removeArtist() {
+
 }
-console.log(removeArtist(myRemoveArtist, 1));
+  
 
 
 
@@ -326,13 +322,8 @@ Use lotsOfArt to do the following:
 */
 
 function lotsOfArt(artists) {
-  for (let i = 0; i <artists.length; i++) {
-    if (artists[i].paintings >= 100) {
-      return artists[i].name;
-    }
-  }
+  
 }
-console.log(lotsOfArt(artists));
 
 
 
