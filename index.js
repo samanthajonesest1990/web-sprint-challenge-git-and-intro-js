@@ -232,8 +232,14 @@ Use getArtistByIndex to do the following:
 
 🌟 EXAMPLE: if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex() {
+function getArtistByIndex(artists, value) {
+  for(let i = 0; i < artists.length; i++) {
+    if (artists[i].id === value) {
+      return `the artist at index ${artists[i].id} is ${artists[i].name}`;
+    }
+  }
 }
+console.log(getArtistByIndex(artists, 2));
 
 
 
@@ -297,7 +303,9 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
+
 function addArtist() {
+ 
   
 }
 
@@ -311,10 +319,14 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt() {
-
+function lotsOfArt(artists) {
+  for (let i = 0; i <artists.length; i++) {
+    if (artists[i].paintings >= 100) {
+      return artists[i].name;
+    }
+  }
 }
-
+console.log(lotsOfArt(artists));
 
 
 
