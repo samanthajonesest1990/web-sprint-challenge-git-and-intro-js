@@ -275,13 +275,14 @@ Use removeArtist to do the following:
 
 
 
-function removeArtist(artists,value) {
-
-
-}
-console.log(removeArtist(artists, 1));
-
-
+function removeArtist(artists, index){
+  const newArray = [...artists];
+  if (index >= 0 && index < newArray.length) {
+    newArray.splice(index, 1);
+  }
+return newArray;
+  }
+console.log(removeArtist(artists, 0));
 
 
 
@@ -327,7 +328,6 @@ function lotsOfArt(artists){
   const artistStuff = artists.filter(artist => artist.paintings > 100);
   const artistNames = artistStuff.map(artist => artist.name);
   return artistNames;
-
 }
 console.log(lotsOfArt(artists));
 
