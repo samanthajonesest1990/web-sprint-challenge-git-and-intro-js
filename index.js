@@ -275,11 +275,11 @@ Use removeArtist to do the following:
 
 
 
-function removeArtist(arr, value) {
+function removeArtist(artists,value) {
+
 
 }
-  
-
+console.log(removeArtist(artists, 1));
 
 
 
@@ -323,11 +323,13 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(artists) {
-  
+function lotsOfArt(artists){
+  const artistStuff = artists.filter(artist => artist.paintings > 100);
+  const artistNames = artistStuff.map(artist => artist.name);
+  return artistNames;
+
 }
-
-
+console.log(lotsOfArt(artists));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 8: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistInfo to do the following: 
