@@ -254,11 +254,13 @@ Use listOfNames to do the following:
 */
 
 
-function listOfNames () {
-  
+function listOfNames(artists) {
+  var newArray = [];
+  for (var i=0; i < artists.length ; ++i)
+  newArray.push(artists[i].name);
+  return newArray;
 }
-
-
+console.log(listOfNames(artists));
 
 
 
@@ -273,7 +275,7 @@ Use removeArtist to do the following:
 
 
 
-function removeArtist() {
+function removeArtist(arr, value) {
 
 }
   
